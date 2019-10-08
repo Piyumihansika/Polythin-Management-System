@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete form</title>
+</head>
+<body>
+
+<form  name="deleteDetails"action="deleteDetails.php" onsubmit="return check1()" method="POST">
+
+ <center><h1>Remove Your Details</h1></center>
+
+<center><h2>Product Code</h2><input type="text" name="productCode"><br></center>
+<center><h2>Product Name</h2><input type="text" name="productName"><br></center>
+<center><h2>Prouct Size(Kg)</h2><input type="text" name="productSize"><br></center>
+
+
+
+
+
+<center><h2>Submit</h2><input type="submit" name="submit"><br></center>
+
+<center><input type="submit" name="back" value="Back"  onclick="goBack()"><br></center>
+
+
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+
+
+<style >
+
+form{
+background-color: #ffb3d9;
+
+width: 100em;
+height: 50em;
+
+}
+
+input[type=submit]{
+
+background-color: #ffccf2;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-right: 45px;
+padding-left: 45px;
+
+font-weight: bold;https://www.youtube.com/watch?v=d1ilE7yMp-I
+}
+
+
+
+
+
+</style>
+    
+
+</form>
+
+<script> 
+function check1()                                    
+{ 
+    var productCode  = document.forms["deleteDetails"]["productCode"];               
+    var  productName= document.forms["deleteDetails"]["productName"];    
+    var productSize= document.forms["deleteDetails"]["productSize"];  
+     
+    
+   
+    if ( productCode.value == "")                                  
+    { 
+        window.alert("Please enter your product code."); 
+         productCode.focus(); 
+        return false; 
+    } 
+   
+    if (productName.value == "")                               
+    { 
+        window.alert("Please enter your product name."); 
+       productName.focus(); 
+        return false; 
+    } 
+
+ if (productSize.value == "")                               
+    { 
+        window.alert("Please enter your product size."); 
+       productSize.focus(); 
+        return false; 
+    } 
+
+     
+
+     return true; 
+}</script> 
+
+
+
+
+
+
+
+</body>
+</html>

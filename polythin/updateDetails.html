@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update form</title>
+</head>
+<body>
+
+<form name="updateDetails" action="updateDetails.php" onsubmit="return check()"  method="POST">
+
+      <center><h1>Update Details</h1></center>
+<center><h2>Product Code</h2><input type="text" name="productCode"><br></center>
+<center><h2>Product Name</h2><input type="text" name="productName"><br></center>
+<center><h2>Product Size(Kg)</h2><input type="text" name="productSize"><br></center>
+<center><h2>Product price</h2><input type="text" name="productPrice"><br></center>
+
+<center><h2>Update</h2><input type="submit" name="submit" value="Update"><br></center><br><br>
+
+
+
+
+
+
+
+<center><input type="submit" name="back" value="Back"  onclick="goBack()"><br></center>
+
+
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+
+
+
+
+<style >
+    
+
+
+form{
+background-color:#ff3399;
+
+width: 100em;
+
+height: 50em;
+
+}
+
+input[type=submit]{
+
+background-color: #ffccf2;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-right: 45px;
+padding-left: 45px;
+
+font-weight: bold;
+}
+
+
+
+</style>
+</form>
+<script> 
+function check()                                    
+{ 
+    var productCode  = document.forms["updateDetails"]["productCode"];               
+    var  productName= document.forms["updateDetails"]["productName"];    
+    var productSize= document.forms["updateDetails"]["productSize"];  
+    var  productPrice=  document.forms["updateDetails"]["productPrice"];  
+    
+   
+    if ( productCode.value == "")                                  
+    { 
+        window.alert("Please enter your product code."); 
+         productCode.focus(); 
+        return false; 
+    } 
+   
+    if (productName.value == "")                               
+    { 
+        window.alert("Please enter your product name."); 
+       productName.focus(); 
+        return false; 
+    } 
+
+ if (productSize.value == "")                               
+    { 
+        window.alert("Please enter your product size."); 
+       productSize.focus(); 
+        return false; 
+    } 
+
+     if (productPrice.value == "")                               
+    { 
+        window.alert("Please enter your product price."); 
+       productPrice.focus(); 
+        return false; 
+    } 
+
+
+     return true; 
+}</script> 
+
+
+</body>
+</html>

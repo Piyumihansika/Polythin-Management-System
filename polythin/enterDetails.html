@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enter form</title>
+</head>
+<body>
+
+<form name="enterDetails" action="enterDetails.php" onsubmit="return check()"  method="POST">
+
+      <center><h1>Enter Details</h1></center>
+<center><h2>Patient Id</h2><input type="text" name="patientId"><br></center>
+<center><h2>Patient Name</h2><input type="text" name="patientName"><br></center>
+<center><h2>Patient Address</h2><input type="text" name="patientAddress"><br></center>
+<center><h2>Patient Disease</h2><input type="text" name="patientDisease"><br></center>
+<center><h2>Patient Entry Date</h2><input type="text" name="patientEntry"><br></center>
+<center><h2>Patient Discharge Date</h2><input type="text" name="patientDischarge"><br></center>
+
+<center><h2>submit</h2><input type="submit" name="submit"><br></center><br><br>
+
+<!--<center><input type="submit" name="back" value="Back"  onclick="goBack()"><br></center>
+
+
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+
+
+-->
+
+<style >
+
+form{
+background-color: #1affa3;
+
+width: 100em;
+
+height: 50em;
+
+}
+
+input[type=submit]{
+
+background-color: #ffccf2;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-right: 45px;
+padding-left: 45px;
+font-weight: bold;
+
+}
+
+
+
+
+
+</style>
+    
+
+</form>
+<script> 
+function check()                                    
+{ 
+    var patientId  = document.forms["enterDetails"]["patientId"];               
+    var  patientName= document.forms["enterDetails"]["patientName"];    
+    var patientAddress= document.forms["enterDetails"]["patientAddress"];  
+    var  patientDisease=  document.forms["enterDetails"]["patientDisease"];
+
+     var patientEntry= document.forms["enterDetails"]["patientEntry"];  
+    var  patientDischarge=  document.forms["enterDetails"]["patientDischarge"];
+      
+   
+    if ( patientId.value == "")                                  
+    { 
+        window.alert("Please enter your patient Id number."); 
+         patientId.focus(); 
+        return false; 
+    } 
+   
+    if (patientName.value == "")                               
+    { 
+        window.alert("Please enter patient name."); 
+       patientName.focus(); 
+        return false; 
+    } 
+
+ if (patientAddress.value == "")                               
+    { 
+        window.alert("Please enter patientAddress."); 
+       patientAddress.focus(); 
+        return false; 
+    } 
+
+     if (productPrice.value == "")                               
+    { 
+        window.alert("Please enter your product price."); 
+       productPrice.focus(); 
+        return false; 
+    } 
+
+
+     return true; 
+}</script> 
+
+
+</body>
+</html>
